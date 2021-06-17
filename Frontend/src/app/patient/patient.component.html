@@ -1,1 +1,13 @@
-<p>patient works!</p>
+<app-navbar> </app-navbar>
+<div class="container-fluid main">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+      <div class="container-fluid">
+        <div class="row">
+          <app-cards *ngFor="let c of count"></app-cards>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

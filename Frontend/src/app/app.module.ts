@@ -9,6 +9,7 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { AdminComponent } from './admin/admin.component';
 import { NavbarComponent } from './HeaderFooter/navbar/navbar.component';
 import { FooterComponent } from './HeaderFooter/footer/footer.component';
+import { CardsComponent } from './cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './HeaderFooter/footer/footer.component';
     DoctorComponent,
     AdminComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

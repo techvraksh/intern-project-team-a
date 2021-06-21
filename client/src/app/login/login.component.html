@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div id="formContent">
+      <h3>Login</h3>
+      <form (submit)="login()">
+          <input type="text" name="email" placeholder="Enter your email address" [(ngModel)]="credentials.email"
+              autocomplete="off">
+          <input type="text" name="password" placeholder="Password" autocomplete="off"
+              [(ngModel)]="credentials.password">
+          <input type="submit" class=" fourth" value="Log In"> <br>
+          <a class="underlineHover" href="#">Forgot Password?</a>
+      </form>
+      <div id="formFooter">
+          <a class="underlineHover" routerLink="/register">New here? Sign up.</a>
+      </div>
+  </div>
+</div>

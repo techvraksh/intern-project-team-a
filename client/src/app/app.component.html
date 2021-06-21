@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fw-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <ul class="nav navbar-nav navbar-right">
+          <a class="nav-link active" aria-current="page" *ngIf="!auth.isLoggedIn()" routerLink="/login">Login</a>
+          <a class="nav-link active " style="color:yellow " aria-current="page" *ngIf="auth.isLoggedIn()" routerLink="/profile">{{
+            auth.getUserDetails()?.name }}</a>
+          <a class="nav-link active" aria-current="page" routerLink="#">About us</a>
+          <a class="nav-link active" aria-current="page" routerLink="#">Contact us</a>
+          <a class="nav-link active" aria-current="page" *ngIf="auth.isLoggedIn()" (click)="auth.logout()">Logout</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

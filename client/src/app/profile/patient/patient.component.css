@@ -1,0 +1,29 @@
+.parent {
+  margin-top: 20px;
+}
+
+.child {
+  border: 1px grey solid;
+  padding-top: 5px;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.btn1 {
+  border: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn1:hover {
+  background-color: blue;
+  color: white;
+  border: none
+}
+
+.btn2 {
+  border: none;
+  background-color: blue;
+  color: white;
+}

@@ -1,0 +1,43 @@
+<div class="container-fluid parent">
+  <div class="row">
+    <div class="col-3" style="height: 650px; border-right: 1px solid grey">
+      <div style="margin: 50px">
+        <ol style="list-style-type: none">
+          <li>
+            <button
+              [ngClass]="{ btn2: state == 1, btn1: true }"
+              type="button"
+              (click)="switchtab(1)"
+            >
+              Patient Information
+            </button>
+            <button
+              [ngClass]="{ btn2: state == 2, btn1: true }"
+              type="button"
+              (click)="switchtab(2)"
+            >
+              Book Appointment
+            </button>
+            <button
+              [ngClass]="{ btn2: state == 3, btn1: true }"
+              type="button"
+              (click)="switchtab(3)"
+            >
+              My Appointments
+            </button>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="container-fluid child">
+        <div *ngIf="state == 2" class="row">
+          <app-apcard *ngFor="let c of count"></app-apcard>
+        </div>
+        <div *ngIf="state == 3" class="row">
+          <app-myappointment *ngFor="let c of count"></app-myappointment>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

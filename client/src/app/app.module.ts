@@ -10,6 +10,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { PatientComponent } from './profile/patient/patient.component';
+import { AppointmentCardComponent } from './profile/patient/appointment-card/appointment-card.component';
+import { MyappointmentComponent } from './profile/patient/myappointment/myappointment.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AdminComponent } from './admin/admin.component';
     ProfileComponent,
     LoginComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    PatientComponent,
+    AppointmentCardComponent,
+    MyappointmentComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

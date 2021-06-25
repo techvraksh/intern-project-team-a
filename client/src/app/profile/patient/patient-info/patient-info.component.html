@@ -1,0 +1,121 @@
+<div *ngIf="state == 1" class="container">
+  <label><b>Name: &nbsp;</b> {{ userDetails.name }}</label
+  ><br />
+  <label><b>Email:&nbsp;</b> {{ userDetails.email }}</label
+  ><br />
+  <label><b>Address:&nbsp;</b>{{ userDetails.address }}</label
+  ><br />
+  <label><b>Age:&nbsp;</b>{{ userDetails.age }}</label
+  ><br />
+  <label><b>Gender:&nbsp;</b>{{ userDetails.gender }}</label
+  ><br />
+  <label><b>Mobile No:&nbsp;</b>{{ userDetails.mobileno }}</label
+  ><br />
+  <label><b>Blood Group:&nbsp;</b>{{ userDetails.bloodgrp }}</label
+  ><br />
+  <button type="button" class="btn btn-primary" (click)="onstatechanged(2)">
+    Edit Profile
+  </button>
+</div>
+<div *ngIf="state == 2" class="container">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Name</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Full Name"
+        aria-describedby="basic-addon1"
+        [ngModel]="userDetails.name"
+        name="name"
+        readonly
+      />
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Addess</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="address"
+        name="address"
+        [ngModel]="userDetails.address"
+      />
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Email Address</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="email"
+        name="email"
+        readonly
+        [ngModel]="userDetails.email"
+      />
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Age</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="age"
+        aria-describedby="basic-addon1"
+        name="age"
+        [ngModel]="userDetails.age"
+      />
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Gender</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="gender"
+        name="gender"
+        readonly
+        [ngModel]="userDetails.gender"
+      />
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Mobile</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="mobile number"
+        name="mobile"
+        [ngModel]="userDetails.mobileno"
+      />
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Blood Group</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="blood group"
+        name="bloodgrp"
+        readonly
+        [ngModel]="userDetails.bloodgrp"
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update Profile</button>
+  </form>
+</div>

@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { PatientComponent } from './profile/patient/patient.component';
 import { AppointmentCardComponent } from './profile/patient/appointment-card/appointment-card.component';
 import { MyappointmentComponent } from './profile/patient/myappointment/myappointment.component';
+import { PatientInfoComponent } from './profile/patient/patient-info/patient-info.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MyappointmentComponent } from './profile/patient/myappointment/myappoin
     AdminComponent,
     PatientComponent,
     AppointmentCardComponent,
-    MyappointmentComponent
+    MyappointmentComponent,
+    PatientInfoComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

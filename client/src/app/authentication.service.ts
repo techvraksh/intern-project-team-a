@@ -12,6 +12,7 @@ export interface UserDetails {
   iat: number;
 }
 
+
 interface TokenResponse {
   token: string;
 }

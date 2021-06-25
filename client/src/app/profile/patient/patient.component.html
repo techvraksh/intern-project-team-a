@@ -9,14 +9,14 @@
               type="button"
               (click)="switchtab(1)"
             >
-              Patient Information
+              Your Profile
             </button>
             <button
               [ngClass]="{ btn2: state == 2, btn1: true }"
               type="button"
               (click)="switchtab(2)"
             >
-              Book Appointment
+              Book Appointments
             </button>
             <button
               [ngClass]="{ btn2: state == 3, btn1: true }"
@@ -31,6 +31,9 @@
     </div>
     <div class="col-9">
       <div class="container-fluid child">
+        <div *ngIf="state == 1" class="row">
+          <app-patient-info></app-patient-info>
+        </div>
         <div *ngIf="state == 2" class="row">
           <app-apcard *ngFor="let c of count"></app-apcard>
         </div>

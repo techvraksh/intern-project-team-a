@@ -1,0 +1,119 @@
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+
+.Homepage{
+  font-size: 28px;
+  text-align: center;
+  color:aqua;
+}
+.HOME{
+position: absolute;
+width: 310px;
+height: 64px;
+left: 28px;
+top: 0px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.017em;
+color: #000000;
+}
+.About{
+position: absolute;
+width: 310px;
+height: 64px;
+left: 1150px;
+top: 0px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.017em;
+color: #000000;
+}
+.Contact{
+position: absolute;
+width: 310px;
+height: 64px;
+left: 1300px;
+top: 0px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.017em;
+color: #000000;
+}
+.logo{
+position: absolute;
+width: 530px;
+height: 104px;
+left: 120px;
+top: 90px;
+font-size: 50px;
+font-style: bold;
+line-height: 81px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.017em;
+color: black;
+}
+.book{
+position: absolute;
+width: 31px;
+height: 352px;
+left: 900px;
+top: 325px;
+font-size: 48px;
+
+}
+.myappointment{
+position: absolute;
+width: 31px;
+min-width: unset;
+height: 550px;
+left: 900px;
+top: 260px;
+size: 48px;
+line-height: 54px;
+}
+.history{
+position: absolute;
+width: 31px;
+min-width: unset;
+height: 550px;
+left: 900px;
+top: 380px;
+size: 48px;
+line-height: 54px;
+}
+
+
+.rec{
+position: absolute;
+width: 870px;
+height: 600px;
+left: 70px;
+top: 192px;
+background:White;
+}

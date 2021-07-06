@@ -14,6 +14,7 @@ import { PatientComponent } from './profile/patient/patient.component';
 import { AppointmentCardComponent } from './profile/patient/appointment-card/appointment-card.component';
 import { MyappointmentComponent } from './profile/patient/myappointment/myappointment.component';
 import { PatientInfoComponent } from './profile/patient/patient-info/patient-info.component';
+import { DocComponent } from './profile/doc/doc.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PatientInfoComponent } from './profile/patient/patient-info/patient-inf
     PatientComponent,
     AppointmentCardComponent,
     MyappointmentComponent,
-    PatientInfoComponent
+    PatientInfoComponent,
+    DocComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

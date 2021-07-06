@@ -2,11 +2,39 @@
   <div id="formContent">
     <h3>Sign up</h3>
     <form (submit)="register()">
-      <input type="text" name="name" placeholder="Enter your full name" autocomplete="off"
-        [(ngModel)]="credentials.name">
-      <input type="text" placeholder="Email address" autocomplete="off" name="email" [(ngModel)]="credentials.email">
-      <input type="text" name="password" placeholder="Password" autocomplete="off" [(ngModel)]="credentials.password">
-      <input type="submit" class=" fourth" value="Signup">
+
+      <input type="name" #name="ngModel" required ngModel name="name" placeholder="Enter your full name"
+        autocomplete="off" [(ngModel)]="credentials.name">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger error">
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+      </div>
+
+      <input type="email" placeholder="Email address" #email="ngModel" required ngModel name="email" autocomplete="off"
+        name="email" [(ngModel)]="credentials.email">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger error">
+        <div *ngIf="email.errors.required">
+          Email is required.
+        </div>
+
+      </div>
+
+      <input type="role" placeholder="set role to doctor or patient" #role="ngModel" required ngModel name="role"
+        autocomplete="off" name="role" [(ngModel)]="credentials.role">
+      <div *ngIf="role.invalid && (role.dirty || role.touched)" class="alert alert-danger error">
+        <div *ngIf="role.errors.required">
+          Setting role is required.
+        </div>
+
+      </div>
+
+      <input type="password" name="password" placeholder="Password" autocomplete="off"
+        [(ngModel)]="credentials.password"> <br> <br>
+
+
+
+      <input type="submit" value="Signup">
     </form>
     <div id="formFooter">
 

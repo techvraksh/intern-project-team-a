@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-patient-info',
   templateUrl: './patient-info.component.html',
@@ -10,13 +11,13 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class PatientInfoComponent implements OnInit {
   state: number = 1;
   userDetails = {
-    name : 'Sahil Agarwal',
-    age : '23',
-    address: 'Agra',
-    gender: 'Male',
-    bloodgrp: 'B+',
-    mobileno: '7017672588',
-    email:'sahildsce@gmail.com'
+    name : "",
+    age : "",
+    address: "",
+    gender: "",
+    bloodgrp: "",
+    mobileno: "",
+    email:""
   }
   constructor() { }
   onstatechanged(state:number) {

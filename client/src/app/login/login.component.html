@@ -1,16 +1,29 @@
 <div class="wrapper">
-  <div id="formContent">
-      <h3>Login</h3>
-      <form (submit)="login()">
-          <input type="text" name="email" placeholder="Enter your email address" [(ngModel)]="credentials.email"
-              autocomplete="off">
-          <input type="text" name="password" placeholder="Password" autocomplete="off"
-              [(ngModel)]="credentials.password">
-          <input type="submit" class=" fourth" value="Log In"> <br>
-          <a class="underlineHover" href="#">Forgot Password?</a>
-      </form>
-      <div id="formFooter">
-          <a class="underlineHover" routerLink="/register">New here? Sign up.</a>
-      </div>
-  </div>
+    <div id="formContent">
+        <h3>Login</h3>
+        <form (submit)="login()">
+            <input type="name" name="name" placeholder="Enter email address" [(ngModel)]="credentials.email"
+                #name="ngModel" required maxlength="30" minlength="2" ngModel autocomplete="off">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                class="alert alert-danger error" >
+              <div *ngIf="name.errors.required">
+                Name is required.
+              </div>
+              <div *ngIf="name.errors.minlength">
+                Name cannot be more than 30 characters long.
+              </div>
+              <div *ngIf="name.errors.minlength">
+                Name must be at least 2 characters long.
+              </div>
+            </div>
+            <input type="password" name="password" placeholder="Password" autocomplete="off"
+                [(ngModel)]="credentials.password">
+
+            <input type="submit" value="Log In"> <br>
+            <a class="underlineHover" href="#">Forgot Password?</a>
+        </form>
+        <div id="formFooter">
+            <a class="underlineHover" routerLink="/register">New here? Sign up.</a>
+        </div>
+    </div>
 </div>

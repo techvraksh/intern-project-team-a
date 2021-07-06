@@ -9,15 +9,17 @@ import { Router } from "@angular/router";
 export class LoginComponent {
   credentials: TokenPayload = {
     email: "",
-    password: ""
+    password: "",
+    role: ""
+
   };
 
   constructor(private auth: AuthenticationService, private router: Router) { }
-
   login() {
     this.auth.login(this.credentials).subscribe(
       () => {
-        this.router.navigateByUrl("/profile");
+    
+        this.router.navigateByUrl("/patient");
       },
       err => {
         console.error(err);

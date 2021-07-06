@@ -8,6 +8,7 @@ export interface UserDetails {
   _id: string;
   email: string;
   name: string;
+  role: string;
   exp: number;
   iat: number;
 }
@@ -19,6 +20,7 @@ interface TokenResponse {
 
 export interface TokenPayload {
   email: string;
+  role: string;
   password: string;
   name?: string;
 }

@@ -1,8 +1,8 @@
 <div *ngIf="state == 1" class="container">
   <label><b>Name: &nbsp;</b> {{ userDetails.name }}</label
   ><br />
-  <label><b>Email:&nbsp;</b> {{ userDetails.email }}</label
-  ><br />
+  <!-- <label><b>Email:&nbsp;</b> {{ userDetails.email }}</label
+  ><br /> -->
   <label><b>Address:&nbsp;</b>{{ userDetails.address }}</label
   ><br />
   <label><b>Age:&nbsp;</b>{{ userDetails.age }}</label
@@ -30,7 +30,8 @@
         aria-describedby="basic-addon1"
         [ngModel]="userDetails.name"
         name="name"
-        readonly
+        [ngModel]="userDetails.name"
+        
       />
     </div>
     <br />
@@ -46,8 +47,9 @@
         [ngModel]="userDetails.address"
       />
     </div>
-    <br />
-    <div class="input-group">
+    
+    <!-- <br /> 
+      <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">Email Address</span>
       </div>
@@ -56,10 +58,10 @@
         class="form-control"
         placeholder="email"
         name="email"
-        readonly
+        
         [ngModel]="userDetails.email"
       />
-    </div>
+    </div> -->
     <br />
     <div class="input-group">
       <div class="input-group-prepend">
@@ -84,7 +86,7 @@
         class="form-control"
         placeholder="gender"
         name="gender"
-        readonly
+        
         [ngModel]="userDetails.gender"
       />
     </div>
@@ -111,7 +113,7 @@
         class="form-control"
         placeholder="blood group"
         name="bloodgrp"
-        readonly
+        
         [ngModel]="userDetails.bloodgrp"
       />
     </div>

@@ -24,9 +24,12 @@ export class PatientInfoComponent implements OnInit {
     this.state = state;
   }
   onSubmit(form: NgForm) {
+    this.userDetails.name = form.value.name;
+    this.userDetails.gender = form.value.gender;
     this.userDetails.mobileno = form.value.mobile;
     this.userDetails.age = form.value.age;
     this.userDetails.address = form.value.address;
+    this.userDetails.bloodgrp = form.value.bloodgrp;
     this.state = 1;
   }
   ngOnInit(): void {
